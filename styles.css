@@ -16,9 +16,6 @@ a{
 #mainNav {
   transition: top 0.3s ease-in-out;
 }
-.logo{
-  border-radius: 10px 0 10px 0;
-}
 .glowing{
   animation-name:glow;
   animation-duration:1s;
@@ -93,6 +90,11 @@ a{
     z-index: 1;
 }
 .home .btn{
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+
     -webkit-box-shadow: 4px 10px 31px 0px rgba(0,0,0,0.31);
     -moz-box-shadow: 4px 10px 31px 0px rgba(0,0,0,0.31);
     box-shadow: 4px 10px 31px 0px rgba(0,0,0,0.31);
@@ -128,68 +130,37 @@ a{
 .icon svg:hover{
   width: 35px;
 }
-
-.about {
-  text-align: justify;
-  width: 50%;
-  margin: 10% auto; 
+.about div{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
-
-@media (max-width: 1200px) {
-  .about {
-    width: 70%; 
-  }
-}
-
-@media (max-width: 768px) {
-  .about {
-    width: 90%; 
-  }
-}
-
-@media (max-width: 480px) {
-  .about {
-    width: 100%;
-  }
-}
-
-.about h1{
-  margin-bottom: 40px;
-  font-size: 64px;
-}
-.about-section {
-  background: linear-gradient(to bottom, #9cabb4 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
-}
-.about-section p {
-  margin-bottom: 5rem;
+.about p{
   text-align: justify;
   text-indent: 20px;
 }
-.projects-section{
-  background: linear-gradient(to bottom, #9cabb4 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+.about ul li{
+  text-align: right;
 }
-.projects-section .featured-text {
-  padding: 2rem;
-}
-@media (min-width: 992px) {
-  .projects-section .featured-text {
-    padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
-  }
-}
-.projects-section .project-text {
-  padding: 3rem;
-  font-size: 90%;
-  text-align: justify;
-}
-@media (min-width: 992px) {
-  .projects-section .project-text {
-    padding: 5rem;
-  }
-}
-.projects-section p{
+.projects p{
   text-align: justify;
   text-indent: 20px;
+}
+
+.certificates .btn:hover{
+  -webkit-box-shadow:0px 0px 123px 60px rgba(45,255,196,0.9);
+  -moz-box-shadow: 0px 0px 123px 60px rgba(45,255,196,0.9);
+  box-shadow: 0px 0px 123px 60px rgba(45,255,196,0.9);
+  z-index: 1;
+}
+.certificates .btn{
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+
+  -webkit-box-shadow: 4px 10px 31px 0px rgba(0,0,0,0.31);
+  -moz-box-shadow: 4px 10px 31px 0px rgba(0,0,0,0.31);
+  box-shadow: 4px 10px 31px 0px rgba(0,0,0,0.31);
 }
 
 .contact-section {
