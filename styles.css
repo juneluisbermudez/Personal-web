@@ -39,6 +39,18 @@ a{
   border-radius: 36% 64% 56% 44% / 39% 34% 66% 61%;
   animation: moving-border-radius 6s infinite alternate ease-in-out;
 }
+@media (max-width: 576px) {
+  .profile {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .profile {
+    width: 75%;
+  }
+}
+
 
 @keyframes moving-border-radius {
   0% {
@@ -99,23 +111,6 @@ a{
     -moz-box-shadow: 4px 10px 31px 0px rgba(0,0,0,0.31);
     box-shadow: 4px 10px 31px 0px rgba(0,0,0,0.31);
 }
-.typewrite{
-  width: 100%;
-  white-space: nowrap;
-  animation: 
-      typing 2s steps(52),
-      cursor .4s step-end infinite alternate;
-}
-@keyframes cursor {
-  50%{
-    border-color: transparent;
-  }
-}
-@keyframes typing {
-  from{
-    width: 0;
-  }
-}
 
 .stack{
   font-size: x-small;
@@ -137,9 +132,6 @@ a{
 .about p{
   text-align: justify;
   text-indent: 20px;
-}
-.about ul li{
-  text-align: right;
 }
 .projects p{
   text-align: justify;
