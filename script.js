@@ -14,3 +14,11 @@ let lastScrollTop = 0;
     
     lastScrollTop = scrollTop;
   });
+
+  var preloaderTimeout = 2000;
+
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        document.body.classList.add('loaded');
+      }, preloaderTimeout);
+    });
