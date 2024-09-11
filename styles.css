@@ -12,35 +12,6 @@ a{
     font-weight: 500;
     font-size: large;
 }
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #130a1f;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body.loaded #preloader {
-  display: none;
-}
-.preloader{
-  position: relative;
-  width: 100%;
-  height: auto;
-  min-height: 35rem;
-  padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("/assets/img/hobby1.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-}
 #mainNav {
   transition: top 0.3s ease-in-out;
 }
@@ -95,6 +66,13 @@ body.loaded #preloader {
   }
 }
 
+section {
+  display: none;
+}
+#hero {
+  display: block;
+}
+
 .title{
   position: relative;
   color: #401b1b;
@@ -133,6 +111,10 @@ body.loaded #preloader {
     -moz-box-shadow: 4px 10px 31px 0px rgba(0,0,0,0.31);
     box-shadow: 4px 10px 31px 0px rgba(0,0,0,0.31);
 }
+.home .cert:hover{
+  color: #000;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
 
 .stack{
   font-size: x-small;
@@ -147,10 +129,7 @@ body.loaded #preloader {
 .icon svg:hover{
   width: 35px;
 }
-.about div{
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
+
 .about p{
   text-align: justify;
   text-indent: 20px;
@@ -159,27 +138,15 @@ body.loaded #preloader {
   text-align: justify;
   text-indent: 20px;
 }
-
-.certificates .btn:hover{
-  -webkit-box-shadow:0px 0px 123px 60px rgba(45,255,196,0.9);
-  -moz-box-shadow: 0px 0px 123px 60px rgba(45,255,196,0.9);
-  box-shadow: 0px 0px 123px 60px rgba(45,255,196,0.9);
-  z-index: 1;
+.social a{
+  text-decoration: none;
+  color: #121212;
 }
-.certificates .btn{
-  font-family: "Kode Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-
-  -webkit-box-shadow: 4px 10px 31px 0px rgba(0,0,0,0.31);
-  -moz-box-shadow: 4px 10px 31px 0px rgba(0,0,0,0.31);
-  box-shadow: 4px 10px 31px 0px rgba(0,0,0,0.31);
+.social a:hover{
+  color: #000;
 }
 
-.contact-section {
-  padding-top: 5rem;
-}
+
 .contact-section .card {
   border: 0;
   border-bottom: 0.25rem solid #64a19d;
@@ -202,6 +169,7 @@ body.loaded #preloader {
   border-width: 0.25rem;
   width: 3rem;
 }
+
 .kode-mono {
   font-family: "Kode Mono", monospace;
   font-optical-sizing: auto;
@@ -212,4 +180,78 @@ body.loaded #preloader {
   font-family: "Matemasie", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+
+#moon-icon {
+  cursor: pointer;
+  color: #161313;
+  font-size: 24px;
+}
+#sun-icon{
+  cursor: pointer;
+  color: #e0e0e0;
+  font-size: 24px;
+}
+
+#moon-icon:hover {
+  color: #000;
+}
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .navbar-brand, .dark-mode .nav-link, .dark-mode h1, .dark-mode h3, .dark-mode p, .dark-mode a {
+  color: #e0e0e0;
+}
+
+.dark-mode .card {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+.dark-mode .footer {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.dark-mode .btn-light {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Dark Mode with Black Overlay */
+.dark-mode {
+  position: relative;
+  background-color: #121212;
+  color: #e0e0e0;
+  overflow: hidden;
+}
+
+.flashlight-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 100px, rgba(0,0,0,0.95) 200px);
+  pointer-events: none;
+  transition: background 0.3s;
+  z-index: 10; /* High z-index to ensure it's on top */
+}
+
+.dark-mode .navbar,
+.dark-mode .navbar-brand,
+.dark-mode .nav-link {
+  z-index: 2; /* Ensure the navbar remains above the flashlight effect */
+}
+
+body.light-mode .flashlight-overlay {
+  display: none; /* No flashlight in light mode */
+}
+
+/* Optional CSS to ensure text looks good */
+.dark-mode a {
+  color: #bb86fc;
 }

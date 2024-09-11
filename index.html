@@ -12,16 +12,21 @@
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <div class="flashlight-overlay" id="flashlight-overlay"></div>
+
   <nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
     <div class="container px-4 px-lg-5">
-        <a class="navbar-brand logo kode-mono text-center glowing" href="#hero">
-            <h1>Luis</h1>
+        <a class="navbar-brand logo text-center glowing">
+            <h1 id="moon-icon"><i class="fa-solid fa-moon"></i></h1>
+            <h1 id="sun-icon" style="display: none;"><i class="fa-regular fa-sun"></i></h1>
         </a>
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa-solid fa-ellipsis"></i>
         </button>
         <div class="collapse navbar-collapse text-end" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
+                <li class="nav-item glowing"><a class="nav-link" href="#hero">Home</a></li>
                 <li class="nav-item glowing"><a class="nav-link" href="#about">About</a></li>
                 <li class="nav-item glowing"><a class="nav-link" href="#projects">Projects</a></li>
                 <li class="nav-item glowing"><a class="nav-link" href="#contacts">Contacts</a></li>
@@ -30,26 +35,23 @@
     </div>
 </nav>
 
-<div id="preloader" class="preloader">
-    <div class="spinner-border text-primary" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-  </div>
-</div>
-
-<section class="hero w-100 align-items-center justify-content-center flex mb-5 pb-5" id="hero">
+<section class="hero w-100 align-items-center justify-content-center flex" id="hero">
     <div class="d-sm-inline-flex d-block mt-5 py-5 w-100 align-items-center justify-content-center">
+
         <div class="d-flex align-items-center justify-content-center">
             <img src="assets/img/profile.jpeg" class="profile mx-auto w-75">
         </div>
 
-      <div class="" id="home">
+      <div class="home" id="home">
           <div class="container-fluid position-relative">
-            <h1 class="text-black-50 font-monospace">Hello, I'm <br><span class="name w-auto fw-bolder">June Luis S. Bermudez</span></h1>
+            <h1 class="font-monospace">Hello, I'm <br><span class="name w-auto fw-bolder">June Luis S. Bermudez</span></h1>
             <h3 class="card-title title">Web Developer</h3>
             <div class="d-grid">
               <p class="font-monospace">"Crafting Digital Experiences, One Line at a Time."</p>
             </div>
+            <a href="https://drive.google.com/drive/folders/1YILxFW5NZ6MshSc2fUvSJsmjhiEcKqCI?usp=drive_link" class="cert">
+                View Certificates
+            </a>
             <div class="d-grid">
               <a href="assets/downloadable/June_Luis_Bermudez_CV.pdf" class="btn btn-light w-50 w-sm-75 w-md-50 w-lg-25 font-monospace" download>
                 Download CV
@@ -73,10 +75,13 @@
       </div>
     </div>
 </section>
-      <section class="about mt-5 pt-5" id="about">
-        <div class="text-white bg-dark w-100 text-center px-auto mx-auto row">
-            <div class="d-flex px-4 font-monospace col-lg order-sm-last order-md-2 order-lg-1">
-                <ul class="mx-5 text-start list-unstyled mx-auto">
+      <section class="about bg-transparent pt-5 mt-5 w-auto" id="about">
+        <div class="text-center col">
+            <div class="">
+                <h1 class="kode-mono">Who Am I?</h1>
+            </div>
+            <div class="font-monospace d-flex">
+                <ul class="text-center list-unstyled mx-auto">
                     <li>Web Developer</li>
                     <li>ICT expert</li>
                     <li>
@@ -105,17 +110,14 @@
                     </li>
                 </ul>
             </div>
-            <div class="d-flex justify-content-center align-items-center col-lg order-sm-first order-md-1 order-lg-2">
-                <h1 class="kode-mono">Who Am I?</h1>
-            </div>
         </div>      
         
-        <div class="text-dark bg-white row text-center px-auto mx-auto">
-            <div class="col-lg order-md-1 order-lg-1">
+        <div class="text-center col">
+            <div class="">
                 <h1 class="kode-mono">What I do?</h1>
             </div>
-            <div class="col-lg px-4 font-monospace order-md-2 order-lg-2 d-flex">
-                <ul class="mx-5 text-end list-unstyled mx-auto">
+            <div class="font-monospace d-flex">
+                <ul class="text-center list-unstyled mx-auto">
                     <li>Front-End Development</li>
                     <li>Back-End Development</li>
                     <li>Responsive Design</li>
@@ -126,18 +128,18 @@
         </div>
       </section>
 
-    <section class="projects bg-dark w-auto py-5" id="projects">
+    <section class="projects container bg-transparent w-auto" id="projects">
       <div class="px-4 px-lg-5">
-         <h1 class="text-white kode-mono text-center my-5">Projects</h1>
+         <h1 class="kode-mono text-center my-5">Projects</h1>
           <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
               <div class="col-lg-6">
                 <img class="img-fluid" src="assets/img/project1.png" alt="..." /></div>
               <div class="col-lg-6">
-                  <div class="bg-black text-center h-100 project">
+                  <div class="bg-transparent text-center h-100 project">
                       <div class="d-flex h-100">
                           <div class="project-text my-auto text-center text-lg-left">
-                              <h4 class="text-white kode-mono">Sample Project 1</h4>
-                              <p class="p-4 text-white-50 font-monospace">3J Gaming Center, the first website project I've done in my school. I used HTML, CSS, JavaScript and Bootstrap in developing.</p>
+                              <h4 class=" kode-mono">Sample Project 1</h4>
+                              <p class="p-4 font-monospace">3J Gaming Center, the first website project I've done in my school. I used HTML, CSS, JavaScript and Bootstrap in developing.</p>
                           </div>
                       </div>
                   </div>
@@ -148,11 +150,11 @@
               <div class="col-lg-6">
                 <img class="img-fluid" src="assets/img/project2.png" alt="..." /></div>
               <div class="col-lg-6 order-lg-first">
-                  <div class="bg-black text-center h-100 project">
+                  <div class="bg-transparent text-center h-100 project">
                       <div class="d-flex h-100">
                           <div class="project-text w-100 my-auto text-center text-lg-right">
-                              <h4 class="text-white kode-mono">Sample Project 2</h4>
-                              <p class="p-4 text-white-50 font-monospace">3J Custom Guitar Shop, also a school project developed using HTML, CSS, JavaScript, Node.js, Laravel and Tailwind.</p>
+                              <h4 class="kode-mono">Sample Project 2</h4>
+                              <p class="p-4 font-monospace">3J Custom Guitar Shop, also a school project developed using HTML, CSS, JavaScript, Node.js, Laravel and Tailwind.</p>
                           </div>
                       </div>
                   </div>
@@ -161,15 +163,7 @@
       </div>
   </section>
 
-  <section class="w-auto text-center certificates">
-    <div class="my-5 overflow-hidden btn btn-light w-25 w-sm-75 w-md-50 w-lg-25">
-        <a href="https://drive.google.com/drive/folders/1YILxFW5NZ6MshSc2fUvSJsmjhiEcKqCI?usp=drive_link" class="font-monospace">
-            View Certificates
-          </a>
-    </div>
-  </section>
-
-  <section class="contact-section bg-black" id="contacts">
+  <section class="contact-section h-100 my-5 py-5" id="contacts">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5">
             <div class="col-md-4 mb-3 mb-md-0">
@@ -204,15 +198,14 @@
             </div>
         </div>
     </div>
+    
 </section>
 
-<section class="mt-5">
-  <div class="social d-flex justify-content-center">
-    <a class="mx-2 text-black-50" href="https://www.tiktok.com/@luis.0.siul"><i class="fa-brands fa-tiktok"></i></a>
-    <a class="mx-2 text-black-50" href="https://www.facebook.com/juneluiszb"><i class="fab fa-facebook-f"></i></a>
-    <a class="mx-2 text-black-50" href="https://github.com/c9n0thing"><i class="fab fa-github"></i></a>
-</div>
-</section>
+    <div class="social d-flex justify-content-center">
+        <a class="mx-2 " href="https://www.tiktok.com/@luis.0.siul"><i class="fa-brands fa-tiktok"></i></a>
+        <a class="mx-2 " href="https://www.facebook.com/juneluiszb"><i class="fab fa-facebook-f"></i></a>
+        <a class="mx-2" href="https://github.com/juneluisbermudez"><i class="fab fa-github"></i></a>
+    </div>
 
 <footer class="footer bg-black small text-center text-black"><div class="container px-4 px-lg-5">Copyright &copy; Reserved 2024</div></footer>
       
