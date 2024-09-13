@@ -255,3 +255,12 @@ body.light-mode .flashlight-overlay {
 .dark-mode a {
   color: #bb86fc;
 }
+
+
+.about ul{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.nav-item:active{
+  border-bottom: 1px solid #121212;
+}
