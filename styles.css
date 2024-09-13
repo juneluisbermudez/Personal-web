@@ -264,3 +264,38 @@ body.light-mode .flashlight-overlay {
 .nav-item:active{
   border-bottom: 1px solid #121212;
 }
+
+
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-animation {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.section-hero {
+  animation-delay: 0.3s;
+}
+
+.section-about {
+  animation-delay: 0.6s;
+}
+
+.section-projects {
+  animation-delay: 0.9s;
+}
+
+.section-contact {
+  animation-delay: 1.2s;
+}

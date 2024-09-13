@@ -56,6 +56,7 @@
             // Hide all sections
             sections.forEach(section => {
                 section.style.display = 'none';
+                section.classList.add('swipe');
             });
 
             // Show the clicked section
@@ -67,3 +68,28 @@
         });
     });
 });
+
+
+// Function to check if element is in viewport
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Function to add animation class when section is in view
+function checkAnimations() {
+  const sections = document.querySelectorAll('.section-animation');
+  sections.forEach(section => {
+    if (isElementInViewport(section)) {
+      section.classList.add('in-view');
+    }
+  });
+}
+
+// Trigger the function on scroll
+window.addEventListener('scroll', checkAnimations);
