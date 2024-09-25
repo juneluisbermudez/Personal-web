@@ -9,33 +9,33 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <div class="flashlight-overlay" id="flashlight-overlay"></div>
-
   <nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
     <div class="container px-4 px-lg-5">
-        <a class="navbar-brand logo text-center glowing">
-            <h1 id="moon-icon"><i class="fa-solid fa-moon"></i></h1>
-            <h1 id="sun-icon" style="display: none;"><i class="fa-regular fa-sun"></i></h1>
-        </a>
+        <h1 class="font-monospaces">Luis &middot; <span class="text-primary">z</span></h1>
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa-solid fa-ellipsis"></i>
         </button>
         <div class="collapse navbar-collapse text-end" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item glowing"><a class="nav-link" href="#hero">Home</a></li>
-                <li class="nav-item glowing"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item glowing"><a class="nav-link" href="#projects">Projects</a></li>
-                <li class="nav-item glowing"><a class="nav-link" href="#contacts">Contacts</a></li>
+                <li class="nav-item glowing"><a class="nav-link" href="#hero" data-target="hero">Home</a></li>
+                <li class="nav-item glowing"><a class="nav-link" href="#about" data-target="about">Resume</a></li>
+                <li class="nav-item glowing"><a class="nav-link" href="#projects" data-target="portfolio">Projects</a></li>
+                <li class="nav-item glowing"><a class="nav-link" href="#contacts" data-target="contacts">Contacts</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<section class="hero w-100 align-items-center justify-content-center flex section-animation section-hero" id="hero">
+<section class="section hero w-100 align-items-center justify-content-center flex section-animation section-hero active" id="hero">
     <div class="d-sm-inline-flex d-block mt-5 py-5 w-100 align-items-center justify-content-center">
 
         <div class="d-flex align-items-center justify-content-center">
@@ -75,114 +75,201 @@
       </div>
     </div>
 </section>
-      <section class="about bg-transparent pt-5 mt-5 w-auto section-animation section-about" id="about">
-        <div class="text-center col">
-            <div class="">
-                <h1 class="kode-mono">Who Am I?</h1>
+      <section class="section about bg-transparent pt-5 mt-5 w-auto section-animation section-about" id="about">
+        <div class="container px-5 my-5">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Resume</span></h1>
             </div>
-            <div class="font-monospace d-flex">
-                <ul class="text-center list-unstyled mx-auto">
-                    <li>Web Developer</li>
-                    <li>ICT expert</li>
-                    <li>
-                        Commited to
-                        <ul class="text-start">
-                            <li>Learning</li>
-                            <li>Collaboration</li>
-                            <li>Problem-Solving</li>
-                        </ul>
-                    </li>
-                    <li>
-                        I pride myself on
-                        <ul class="text-start">
-                            <li>Versatility</li>
-                            <li>Flexibilty</li>
-                            <li>Detail-oriented</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Personal Hobbies:
-                        <ul class="text-start">
-                            <li>Playing Electric Guitar</li>
-                            <li>Music Creation</li>
-                            <li>Comic Reading</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>      
-        
-        <div class="text-center col">
-            <div class="">
-                <h1 class="kode-mono">What I do?</h1>
-            </div>
-            <div class="font-monospace d-flex">
-                <ul class="text-center list-unstyled mx-auto">
-                    <li>
-                        Front-End Development
-                        <ul class="text-start">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Back-End Development
-                        <ul class="text-start">
-                            <li>Laravel</li>
-                            <li>PHP</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Responsive Design
-                        <ul class="text-start">
-                            <li>Tailwind</li>
-                            <li>Bootstrap</li>
-                        </ul>
-                    </li>
-                    <li>Web Performance Optimization</li>
-                    <li>Version Control And Collaboration</li>
-                </ul>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-11 col-xl-9 col-xxl-8">
+                    <!-- Experience Section-->
+                    <div>
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <h2 class="text-primary fw-bolder mb-0">Experience</h2>
+                        </div>
+                        <!-- Experience Card 1-->
+                        <div class="card shadow-lg border-0 rounded-3 mb-5">
+                            <div class="card-body p-5">
+                                <div class="row align-items-center gx-5">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-3">
+                                            <div class="text-primary fw-bolder mb-2">2023 - Present</div>
+                                            <div class="small fw-bolder">Freelance</div>
+                                            <div class="small text-muted">Upwork Inc.</div>
+                                            <div class="small text-muted">Remote Workspace</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8"><div class="des">I help businesses and individuals turn their ideas into powerful, responsive, and scalable websites. As a freelancer, I focus on delivering high-quality code, pixel-perfect designs, and seamless user experiences.</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Experience Card 2-->
+                        <div class="card shadow-lg border-0 rounded-3 mb-5">
+                            <div class="card-body p-5">
+                                <div class="row align-items-center gx-5">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-3">
+                                            <div class="text-primary fw-bolder mb-2">2022</div>
+                                            <div class="small fw-bolder">Printer Technician</div>
+                                            <div class="small text-muted">Beige Ink Station</div>
+                                            <div class="small text-muted">Dagohoy, Butuan City</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8"><div class="des">Expert in diagnosing, repairing, and maintaining a wide range of printers, copiers, and multifunction devices. My hands-on experience, combined with a deep understanding of printer hardware and software, ensures efficient troubleshooting and optimal performance of your printing equipment.</div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Education Section-->
+                    <div>
+                        <h2 class="text-secondary fw-bolder mb-4">Education</h2>
+                        <!-- Education Card 1-->
+                        <div class="card shadow-lg border-0 rounded-3 mb-5">
+                            <div class="card-body p-5">
+                                <div class="row align-items-center gx-5">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-3">
+                                            <div class="text-secondary fw-bolder mb-2">2022 - Present</div>
+                                            <div class="mb-2">
+                                                <div class="small fw-bolder">Caraga State University</div>
+                                                <div class="small text-muted">Main Campus @ Butuan City</div>
+                                            </div>
+                                            <div class="fst-italic">
+                                                <div class="small text-muted">Bachelor of Science in Information Technology</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 des"><div class="des">I'm currently taking Bachelor’s Degree in Information Technology, where I gained a comprehensive understanding of modern computing technologies and their practical applications. Through this degree, I developed a strong foundation in various IT disciplines, including software development, networking, database management, and systems analysis.</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Education Card 2-->
+                        <div class="card shadow-lg border-0 rounded-3 mb-5">
+                            <div class="card-body p-5">
+                                <div class="row align-items-center gx-5">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-3">
+                                            <div class="text-secondary fw-bolder mb-2">2021 - 2022</div>
+                                            <div class="mb-2">
+                                                <div class="small fw-bolder">Fr. Urios Institute of Technology Inc.</div>
+                                                <div class="small text-muted">Ampayon, Butuan City</div>
+                                            </div>
+                                            <div class="fst-italic">
+                                                <div class="small text-muted">TESDA Vocational</div>
+                                                <div class="small text-muted">Computer Systems Servicing NCII</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8"><div class="des">I am a TESDA-certified Computer Systems Servicing NC II graduate, trained to provide a wide range of technical support and maintenance services for computer systems and networks. This certification has equipped me with practical skills in the installation, configuration, and troubleshooting of hardware, software, and network systems, ensuring efficient operation for both personal and business environments.</div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Divider-->
+                    <div class="pb-5"></div>
+                    <!-- Skills Section-->
+                    <div>
+                        <!-- Skillset Card-->
+                        <div class="card shadow-lg border-0 rounded-3 mb-5">
+                            <div class="card-body p-5">
+                                <!-- Professional skills list-->
+                                <div class="mb-5">
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-tools"></i></div>
+                                        <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Professional Skills</span></h3>
+                                    </div>
+                                    <div class="row row-cols-1 row-cols-md-3 mb-4">
+                                        <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-3 p-3 h-100">Computer Hardware Installation & Configuration</div></div>
+                                        <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-3 p-3 h-100">Operating System Deployment</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-3 p-3 h-100">Network Setup & Troubleshooting</div></div>
+                                    </div>
+                                    <div class="row row-cols-1 row-cols-md-3 mb-4">
+                                        <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-3 p-3 h-100">Computer System Maintenance</div></div>
+                                        <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-3 p-3 h-100">Web Development</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-3 p-3 h-100">Database Management</div></div>
+                                    </div>
+                                    <div class="row row-cols-1 row-cols-md-3">
+                                        <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-3 p-3 h-100">API Integration</div></div>
+                                        <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-3 p-3 h-100">Technical Support & Client Assistance</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-3 p-3 h-100">CMS & E-Commerce Solutions</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
       </section>
 
-    <section class="projects container bg-transparent w-auto section-animation section-projects" id="projects">
-      <div class="px-4 px-lg-5">
-         <h1 class="kode-mono text-center my-5">Projects</h1>
-          <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-              <div class="col-lg-6">
-                <img class="img-fluid" src="assets/img/project1.png" alt="..." /></div>
-              <div class="col-lg-6">
-                  <div class="bg-transparent text-center h-100 project">
-                      <div class="d-flex h-100">
-                          <div class="project-text my-auto text-center text-lg-left">
-                              <h4 class=" kode-mono">Sample Project 1</h4>
-                              <p class="p-4 font-monospace">3J Gaming Center, the first website project I've done in my school. I used HTML, CSS, JavaScript and Bootstrap in developing.</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          
-          <div class="row gx-0 justify-content-center">
-              <div class="col-lg-6">
-                <img class="img-fluid" src="assets/img/project2.png" alt="..." /></div>
-              <div class="col-lg-6 order-lg-first">
-                  <div class="bg-transparent text-center h-100 project">
-                      <div class="d-flex h-100">
-                          <div class="project-text w-100 my-auto text-center text-lg-right">
-                              <h4 class="kode-mono">Sample Project 2</h4>
-                              <p class="p-4 font-monospace">3J Custom Guitar Shop, also a school project developed using HTML, CSS, JavaScript, Node.js, Laravel and Tailwind.</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
+    <section class="section projects container bg-transparent w-auto section-animation section-projects" id="portfolio">
+        <div class="container px-5 mb-5">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projects</span></h1>
+            </div>
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/project1.png" title="3J Gaming Centre">
+                            <img class="img-fluid" src="assets/img/project1.png" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Website</div>
+                                <div class="project-name">3J Gaming Centre</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/project2.png" title="3J Custom Guitar Shop">
+                            <img class="img-fluid" src="assets/img/project2.png" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Website</div>
+                                <div class="project-name">3J Custom Guitar Shop</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/calc.png" title="Calculator">
+                            <img class="img-fluid" src="assets/img/calc.png" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Website</div>
+                                <div class="project-name">Calculator</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/nano cotex.png" title="Nano Cortex">
+                            <img class="img-fluid" src="assets/img/nano cotex.png" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">PowerPoint</div>
+                                <div class="project-name">Nano Cortex</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/graphic.png" title="History of Internet">
+                            <img class="img-fluid" src="assets/img/graphic.png" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Graphic Design</div>
+                                <div class="project-name">Hisory of Internet</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/hobby1.jpg" title="Guitar">
+                            <img class="img-fluid" src="assets/img/hobby1.jpg" alt="..." />
+                            <div class="portfolio-box-caption p-3">
+                                <div class="project-category text-white-50">Hobby</div>
+                                <div class="project-name">Me Playing Guitar</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
   </section>
 
-  <section class="contact-section h-100 my-5 py-5 section-animation section-contacts" id="contacts">
+  <section class="section contact-section h-100 my-5 py-5 section-animation section-contacts" id="contacts">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5">
             <div class="col-md-4 mb-3 mb-md-0">
